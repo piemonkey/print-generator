@@ -1,0 +1,52 @@
+@font-face {
+  font-family: fucxed-caps;
+  src: url('FUCXEDCAPS-v2.otf') format('opentype');
+}
+
+body {
+  display: flex;
+}
+
+.flyer {
+  flex: 1;
+}
+
+.inputs {
+  flex: 0;
+}
+
+
+.title {
+  font-family: 'fucxed-caps';
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+
+@media screen {
+  .page {
+    height: 90vh;
+    width: 63.6vh;
+    box-shadow: 5px 5px 5px grey;
+    border: 0.2px solid grey;
+    margin: 10px;
+  }
+}
+
+@media print {
+  .inputs {
+    display: none;
+  }
+
+  .flyer {
+    width: 100%;
+  }
+
+  .page {
+    /* height: 100%; */
+    break-after: page;
+  }
+}

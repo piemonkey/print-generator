@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XR Flyer Generator</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <script type="text/javascript" src="js/inputs.js"></script>
+  </head>
+  <body>
+    <section class="flyer">
+      <div class="page">
+        <h3 class="title"></h3>
+        <p class="event-date"></p>
+        <p class="event-location"></p>
+        <p class="event-description"></p>
+        <img class="logo" src="assets/XR-logo-RGB-Black-Linear.png" />
+      </div>
+      <div class="page">
+        <p>page2</p>
+      </div>
+    </section>
+    <section class="inputs">
+      <label>
+        Title
+        <input type="text" oninput="onTextInput('.title', event)"
+          value="Heading for extinction (and what to do about it)"
+        />
+      </label>
+      <label>
+        Date
+        <input type="date" oninput="onDateInput('.event-date', event)" />
+      </label>
+      <label>
+        Location
+        <input type="text" oninput="onTextInput('.event-location', event)"
+          value="123 Fake Street, Euston, London N1 1AA"/>
+      </label>
+      <label>
+        Description
+        <textarea oninput="onTextAreaInput('.event-description', event)">
+In this free and public talk, speakers from
+Extinction Rebellion will share the latest
+science on where our planet is heading,
+discuss some of the current psychology
+around climate change, and offer solutions
+through the study of social movement. All
+welcome!
+        </textarea>
+      </label>
+      <button onclick="printDoc()">
+        Print
+      </button>
+  </body>
+</html>
